@@ -10,7 +10,7 @@ import {
   VStack,
   useToast,
   Select,
-  FormLabel
+  FormLabel,
 } from "@chakra-ui/react";
 
 // EditUser Component
@@ -30,11 +30,7 @@ const EditUser = () => {
   user data is sent to the server for updating the user. The server response is handled, and appropriate 
   success, error, or warning messages are displayed using the Chakra UI toast component.  */
   useEffect(() => {
-    fetch(`https://fantastic-blue-cobra.cyclic.app/get/user/${id}`, {
-      headers: {
-        Authorization: localStorage.getItem("token")
-      }
-    })
+    fetch(`https://fantastic-blue-cobra.cyclic.app/get/user/${id}`)
       .then((res) => res.json())
       .then((res) => {
         setName(res.name);
@@ -54,7 +50,6 @@ const EditUser = () => {
         email: email,
         gender: gender,
         status: status,
-        id: Math.round(Math.random() * Date.now() * 10000000)
       };
 
       const response = await fetch(
@@ -62,9 +57,9 @@ const EditUser = () => {
         {
           method: "PUT",
           headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json",
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
         }
       );
 
@@ -75,22 +70,10 @@ const EditUser = () => {
           status: "success",
           duration: 2000,
           isClosable: true,
-          position: "bottom"
+          position: "bottom",
         });
         setTimeout(() => {
           navigate("/");
-        }, 1000);
-      } else {
-        setLoading(false);
-        toast({
-          title: "User Updated Successfully",
-          status: "success",
-          duration: 1000,
-          isClosable: true,
-          position: "bottom"
-        });
-        setTimeout(() => {
-          navigate(`/`);
         }, 1000);
       }
     } catch (error) {
@@ -101,7 +84,7 @@ const EditUser = () => {
         status: "error",
         duration: 1000,
         isClosable: true,
-        position: "bottom"
+        position: "bottom",
       });
     }
   };

@@ -11,7 +11,7 @@ import {
   TableContainer,
   Heading,
   Button,
-  Text
+  Text,
 } from "@chakra-ui/react";
 
 // UserList Component
@@ -31,7 +31,6 @@ const UserList = () => {
         "https://fantastic-blue-cobra.cyclic.app/get/user"
       );
       const postData = await response.json();
-      console.log(postData);
       setData(postData);
       setIsLoading(false);
     } catch (error) {
@@ -85,8 +84,8 @@ const UserList = () => {
             <Table variant="striped" colorScheme="teal">
               <Thead>
                 <Tr>
-                  <Th fontSize="15px">S.No</Th>
-                  <Th fontSize="15px">Id</Th>
+                  <Th fontSize="15px">S.NO</Th>
+                  <Th fontSize="15px">ID</Th>
                   <Th fontSize="15px">Name</Th>
                   <Th fontSize="15px">Email</Th>
                   <Th fontSize="15px">Gender</Th>

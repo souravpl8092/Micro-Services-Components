@@ -6,6 +6,13 @@
  
 ### This is a User Management Application that allows you to manage user data, including creating new users, updating existing users, and exporting user data as a CSV file. It provides a web-based interface for interacting with the application.
 
+### It uses four microservices:
+
+- GET : Retrieves users based on a query.
+- POST : Creates a new user.
+- PUT : Updates an existing user.
+- EXPORT : Exports user data as a CSV file.
+
 <br/>
 
 <table>

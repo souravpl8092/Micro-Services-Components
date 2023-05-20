@@ -9,7 +9,7 @@ import {
   VStack,
   useToast,
   Select,
-  FormLabel
+  FormLabel,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,8 +35,7 @@ const AddUser = () => {
           name,
           email,
           gender,
-          status,
-          id: Math.round(Math.random() * Date.now() * 10000000)
+          status
         };
 
         const response = await fetch(
@@ -44,7 +43,7 @@ const AddUser = () => {
           {
             method: "POST",
             body: JSON.stringify(payload),
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" },
           }
         );
 
@@ -55,7 +54,7 @@ const AddUser = () => {
             status: "success",
             duration: 1000,
             isClosable: true,
-            position: "bottom"
+            position: "bottom",
           });
           setTimeout(() => {
             navigate("/");
@@ -72,7 +71,7 @@ const AddUser = () => {
           status: "warning",
           duration: 1000,
           isClosable: true,
-          position: "bottom"
+          position: "bottom",
         });
       }
     } catch (error) {
@@ -83,7 +82,7 @@ const AddUser = () => {
         status: "error",
         duration: 1000,
         isClosable: true,
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
