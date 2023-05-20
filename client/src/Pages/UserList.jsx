@@ -29,7 +29,6 @@ const UserList = () => {
     try {
       const response = await fetch(
         "https://fantastic-blue-cobra.cyclic.app/get/user"
-        /* `https://easy-cyan-adder-wrap.cyclic.app/user` */
       );
       const postData = await response.json();
       console.log(postData);

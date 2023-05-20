@@ -98,7 +98,7 @@ const Navbar = () => {
                 </Stack>
               </DrawerBody>
               <DrawerFooter bg="whiteAlpha.900">
-                <Link to="http://localhost:8080/user/export">
+                <Link to="https://fantastic-blue-cobra.cyclic.app/export/user/">
                   <Button colorScheme="red" fontSize="20px" cursor="pointer">
                     Sign out
                   </Button>

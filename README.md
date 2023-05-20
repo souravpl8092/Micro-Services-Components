@@ -102,7 +102,7 @@
 - Front-end: React.js, Chakra UI, React Router DOM
 - Back-end: Node.js, Express.js
 - Database: MongoDB with Mongoose
-- Other Libraries: json2csv, cors
+- Other Libraries: json2csv, fast-gateway, cors
 
 <br/>
 
@@ -140,7 +140,7 @@
 
 <br/>
 
-### index.js
+### server.js
 
 - This file defines the entry point of the server, sets up the Express server, establishes the database connection, and defines the routes.
 
